@@ -168,8 +168,8 @@
 
   /* ---------- Selected works ---------- */
   .work { background: var(--accent); color: var(--bg); padding: calc(110 * var(--u)) var(--gutter) 0; }
-  .explore { display: flex; flex-direction: column; align-items: center; gap: 12px; width: max-content; margin: calc(-70 * var(--u)) auto calc(56 * var(--u));
-             font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--bg); opacity: .9; transition: opacity .2s; }
+  .explore { display: flex; flex-direction: column; align-items: center; gap: 12px; width: max-content; margin: 0 auto calc(40 * var(--u)); position: relative; z-index: 2;
+             font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink); opacity: .75; transition: opacity .2s; }
   .explore svg { width: 16px; height: 22px; }
   .explore:hover { opacity: 1; }
   .explore svg { animation: nudgeDown 1.8s ease-in-out infinite; }
@@ -362,7 +362,7 @@
     .art.art-cd { height: auto; width: 70vw; right: 24px; top: 115px; }
     .art.art-ill { height: auto; width: 74vw; right: 24px; top: 95px; }
     .work { padding: 64px 24px 48px; }
-    .explore { margin: -24px auto 28px; }
+    .explore { margin: 0 auto 28px; }
     .work-head { grid-template-columns: 1fr; gap: 20px; padding-bottom: 32px; }
     .work-head h2 { font-size: clamp(44px, 13.5vw, 96px); white-space: normal; }
     :root { --headbar: 72px; }
@@ -450,10 +450,11 @@
 
 </main>
 
-<section class="work" id="works" aria-labelledby="works-title">
-  <a class="explore" href="#projects">Explore my work
+<a class="explore" href="#projects">Explore my work
     <svg viewBox="0 0 16 22" fill="none" aria-hidden="true"><path d="M8 1v19M2 14l6 6 6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
+</a>
+
+<section class="work" id="works" aria-labelledby="works-title">
   <div class="work-head">
     <h2 id="works-title"><span class="sans">Selected</span><span class="serif">works</span></h2>
     <p>From product interfaces to brand identities, illustration and motion — every project starts with the people it's for, and is crafted to keep working long after launch.</p>
